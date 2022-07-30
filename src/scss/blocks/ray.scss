@@ -1,0 +1,123 @@
+.ray {
+    @media (max-width: 920px) {
+        padding-top: 100px;
+    }
+    @media (max-width: 660px) {
+        padding-top: 60px;
+    }
+    @media (max-width: 490px) {
+        @include adaptiv-value(padding-top, 400, 80, 1);
+    }
+    @media (max-width: 420px) {
+        padding-top: 40px;
+    }
+    @media (max-width: 370px) {
+        padding-top: 20px;
+    }
+    // .ray__inner
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 990px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    // .ray__body
+    &__body {
+        margin-right: 10px;
+        @media (max-width: 990px) {
+            order: 2;
+            margin-right: 0;
+        }
+    }
+    // .ray__body-title
+    &__body-title {
+        @extend %fontComf;
+        font-size: 60px;
+        line-height: 67px;
+        color: $blue;
+        margin-bottom: 50px;
+        @media (max-width: 570px) {
+            font-size: 40px;
+            line-height: 47px;
+            margin-bottom: 10px;
+        }
+    }
+    // .ray__body-content
+    &__body-content {
+        position: relative;
+        margin-bottom: 25px;
+    }
+    // .ray__body-item
+    &__body-item {
+        margin-bottom: 25px;
+    }
+    // .ray__body-subtitle
+    &__body-subtitle {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: $black;
+        margin-bottom: 5px;
+    }
+    // .ray__body-subtitle--blue
+    &__body-subtitle--blue {
+        color: $blue;
+    }
+    // .ray__body-text
+    &__body-text {
+        font-size: 18px;
+        line-height: 22px;
+        color: $black;
+    }
+    // .ray__body-img
+    &__body-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transition: all .5s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+        @media (max-width: 570px) {
+            width: 80px;
+        }
+    }
+    // .ray__body-btn
+    &__body-btn {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 45px;
+        color: $blue;
+        border: 2px solid #0093A1;
+        padding: 18px 197px;
+        transition: all .2s ease;
+        &:hover{
+            color: $black;
+            background-color: $green;
+            border-color: $green;
+        }
+        @media (max-width: 570px) {
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 35px;
+        }
+    }
+    // .ray__img
+    &__img {
+        width: 50%;
+        padding-bottom: 52%;
+        @media (max-width: 990px) {
+            order: 1;
+        }
+        @media (max-width: 420px) {
+            width: 80%;
+            padding-bottom: 80%;
+        }
+    }
+}
+
